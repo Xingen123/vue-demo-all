@@ -4,54 +4,39 @@
       <div class="logo">
         <img src="./assets/logo.png" alt="" />
       </div>
-      <a-menu
-        theme="dark"
-        mode="inline"
-        :default-selected-keys="['/demo1']"
-        @click="onChangeMenu"
-      >
-        <a-menu-item v-for="i in routers" :key="i.path">
+      <a-menu theme="dark" mode="inline" :default-selected-keys="['demo3']" @click="onChangeMenu">
+        <a-menu-item v-for="i in routers" :key="i.name">
           <a-icon type="smile" theme="outlined" />
           <span>{{ i.title }}</span>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout>
-      <a-layout-header
-        style="background: #fff; padding: 0;display:flex;"
-        class="header"
-      >
-        <a-icon
-          class="trigger"
-          :type="collapsed ? 'menu-unfold' : 'menu-fold'"
-          @click="() => (collapsed = !collapsed)"
-        />
+      <a-layout-header style="background: #fff; padding: 0;display:flex;" class="header">
+        <a-icon class="trigger" :type="collapsed ? 'menu-unfold' : 'menu-fold'" @click="() => (collapsed = !collapsed)" />
         <a-divider>常用demo</a-divider>
       </a-layout-header>
-      <a-layout-content
-        :style="{
-          margin: '24px 16px',
-          padding: '24px',
-          background: '#fff',
-          minHeight: '280px'
-        }"
-      >
+      <a-layout-content class="content">
         <router-view />
       </a-layout-content>
     </a-layout>
   </a-layout>
 </template>
 <script>
-import routers from "../src/router/routers";
+import routers from '../src/router/routers';
 export default {
-  data() {
+  data () {
     return {
       routers,
-      collapsed: false
+      collapsed: false,
+      activeRouter: []
     };
   },
+  mounted () {
+    this.activeRouter = ['demo3']
+  },
   methods: {
-    onChangeMenu({ key }) {
+    onChangeMenu ({ key }) {
       this.$router.push(key);
     }
   }
@@ -84,5 +69,15 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.content {
+  height: 60vh;
+  background: #fff;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 </style>

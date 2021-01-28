@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     handle() {
-      this.$emit("update:visible", false);
+      this.$emit('update:visible', false);
     }
   }
 };

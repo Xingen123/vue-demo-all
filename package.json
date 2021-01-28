@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "deploy:dev": "deploy-cli-service deploy --mode dev",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "express": "^4.17.1",
     "mysql": "^2.18.1",
     "vue": "^2.6.12",
+    "vue-good-table": "^2.21.3",
     "vue-router": "^3.2.0",
     "vuex": "^3.5.1"
   },
@@ -28,6 +30,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "compression-webpack-plugin": "^6.1.1",
+    "deploy-cli-service": "^1.2.4",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^6.2.2",

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Model from "./components/model";
+import Model from './components/model';
 export default {
   components: {
     Model

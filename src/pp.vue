@@ -2,9 +2,9 @@
   <div style="width: 100%;text-align: center;">
     <a-divider>Demo合集</a-divider>
     <a-tabs
+      v-model="active"
       default-active-key="1"
       tab-position="left"
-      v-model="active"
       @prevClick="callback"
       @nextClick="callback"
       @change="changeTabs"
@@ -21,8 +21,8 @@
 export default {
   data() {
     return {
-      mode: "/",
-      active: "demo1"
+      mode: '/',
+      active: 'demo1'
     };
   },
   methods: {
