@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <h1>
-      <a href="https://xaksis.github.io/vue-good-table/guide/configuration/table-events.html#on-per-page-change" target="view_window">点击查看</a>
+      <a href="https://xaksis.github.io/vue-good-table/guide/#installation" target="view_window">点击查看</a>
       <!-- 内部子组件 -->
       <h1>内部子组件</h1>
       <New />

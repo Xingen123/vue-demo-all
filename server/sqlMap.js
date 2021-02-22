@@ -16,7 +16,7 @@ const deleteValue = (params) => {
 };
 
 const updateValue = ({ name }) => {
-  const sql = `UPDATE websites SET url = ? where id = 5`;
+  const sql = `UPDATE websites SET name = ? where id = 5`;
   return query(sql, [name]);
 };
 module.exports = {

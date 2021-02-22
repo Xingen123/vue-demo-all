@@ -71,7 +71,6 @@ export default {
   align-items: center;
 }
 .content {
-  height: 60vh;
   background: #fff;
   margin: 20px;
   padding: 20px;
@@ -79,5 +78,9 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.video-player {
+  width: 800px;
+  height: 500px;
 }
 </style>

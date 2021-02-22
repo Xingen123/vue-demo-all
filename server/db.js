@@ -18,12 +18,16 @@
 
 module.exports = {
   mysql: {
-    host: "111.231.9.155",
-    user: "root",
-    port: "3306",
-    password: "xingEN521",
-    database: "RUNOOB"
-  }
+    host: '111.231.9.155',
+    user: 'root',
+    port: '3306',
+    password: 'xingEN521',
+    database: 'RUNOOB',
+    connectionLimit: 1000,
+    connectTimeout: 60 * 60 * 1000,
+    acquireTimeout: 60 * 60 * 1000,
+    timeout: 60 * 60 * 1000,
+  },
 };
 
 // var setValue = function() {
